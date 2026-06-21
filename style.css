@@ -18,6 +18,11 @@ a {
     color: inherit;
 }
 
+/* MARGEN DE SCROLL: Evita que el menú fijo tape los títulos al pulsar los enlaces */
+section {
+    scroll-margin-top: 85px; 
+}
+
 /* --- BARRA DE NAVEGACIÓN --- */
 nav {
     background-color: #0f172a;
@@ -113,14 +118,14 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* Evita que la foto se deforme o aplaste si se reduce el espacio */
+    flex-shrink: 0;
 }
 
 /* Ajuste de tu imagen (0.jpg) dentro del círculo */
 .hero-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Centra tu rostro y mantiene la proporción de la foto */
+    object-fit: cover;
     display: block;
 }
 
@@ -154,7 +159,7 @@ nav ul li a:hover {
 /* --- TARJETAS Y GRID --- */
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Optimizado para pantallas intermedias */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -235,7 +240,7 @@ nav ul li a:hover {
 
 .contact-info strong {
     color: #0f172a;
-    word-break: break-all; /* Rompe el texto del correo si la pantalla es excesivamente estrecha */
+    word-break: break-all;
 }
 
 .contact-detail {
@@ -259,7 +264,11 @@ footer {
 
 /* --- ADAPTACIÓN RESPONSIVE PARA MÓVILES Y TABLETS --- */
 @media (max-width: 768px) {
-    /* Menú de navegación corregido sin desbordamiento */
+    /* En móvil el menú cambia de tamaño, por lo que adaptamos el margen de scroll */
+    section {
+        scroll-margin-top: 150px; 
+    }
+
     nav {
         flex-direction: column;
         gap: 0.8rem;
@@ -280,7 +289,6 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* Sección Hero en formato vertical e idóneo para móviles */
     .hero {
         flex-direction: column; 
         text-align: center;
@@ -303,13 +311,11 @@ footer {
         font-size: 1.25rem;
     }
 
-    /* Reducción proporcional del círculo de la foto */
     .hero-avatar {
         width: 180px;
         height: 180px;
     }
 
-    /* Ajustes generales del contenedor de secciones */
     .container {
         padding: 2.5rem 1rem;
         width: 100%;
