@@ -1,4 +1,10 @@
 /* --- ESTILOS GLOBALES --- */
+html {
+    /* MÁGICA AQUÍ: Deja libre un 12% del alto de la pantalla en PC al pinchar los enlaces */
+    scroll-padding-top: 12vh; 
+    scroll-behavior: smooth; /* Hace que el movimiento al pinchar sea fluido y suave */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,11 +22,6 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-/* MARGEN DE SCROLL: Evita que el menú fijo tape los títulos en ordenador */
-section {
-    scroll-margin-top: 90px; 
 }
 
 /* --- BARRA DE NAVEGACIÓN --- */
@@ -264,9 +265,9 @@ footer {
 
 /* --- ADAPTACIÓN RESPONSIVE PARA MÓVILES Y TABLETS --- */
 @media (max-width: 768px) {
-    /* CORRECCIÓN AQUÍ: Subimos a 195px para asegurarnos de que libre el menú móvil por completo */
-    section {
-        scroll-margin-top: 195px; 
+    html {
+        /* CORRECCIÓN ROBUSTA: Deja libre el 25% superior de la pantalla del móvil */
+        scroll-padding-top: 25vh; 
     }
 
     nav {
