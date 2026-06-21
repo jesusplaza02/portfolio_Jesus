@@ -18,9 +18,9 @@ a {
     color: inherit;
 }
 
-/* MARGEN DE SCROLL: Evita que el menú fijo tape los títulos al pulsar los enlaces */
+/* MARGEN DE SCROLL: Evita que el menú fijo tape los títulos en ordenador */
 section {
-    scroll-margin-top: 85px; 
+    scroll-margin-top: 90px; 
 }
 
 /* --- BARRA DE NAVEGACIÓN --- */
@@ -264,9 +264,9 @@ footer {
 
 /* --- ADAPTACIÓN RESPONSIVE PARA MÓVILES Y TABLETS --- */
 @media (max-width: 768px) {
-    /* En móvil el menú cambia de tamaño, por lo que adaptamos el margen de scroll */
+    /* CORRECCIÓN AQUÍ: Subimos a 195px para asegurarnos de que libre el menú móvil por completo */
     section {
-        scroll-margin-top: 150px; 
+        scroll-margin-top: 195px; 
     }
 
     nav {
