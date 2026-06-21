@@ -1,0 +1,277 @@
+/* --- ESTILOS GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+nav {
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+    transition: color 0.3s;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 5rem 5% 6rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    max-width: 60%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.btn-cv {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2);
+    transition: all 0.3s;
+}
+
+.btn-cv:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+/* Contenedor del círculo de perfil */
+.hero-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    overflow: hidden;
+    background-color: #334155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos específicos para que tu foto (0.jpg) se adapte al círculo */
+.hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de tu foto sin deformarla */
+    display: block;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* --- SOBRE MÍ --- */
+.section-perfil {
+    margin-bottom: 4rem;
+}
+
+.perfil-text {
+    font-size: 1.1rem;
+    color: #475569;
+    max-width: 850px;
+}
+
+/* --- TARJETAS Y GRID --- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border-left: 4px solid #0f172a;
+}
+
+.card.accent {
+    border-left: 4px solid #38bdf8;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.card .subtitle {
+    color: #64748b;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    padding-left: 1.2rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- HABILIDADES --- */
+.skills-subtitle {
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.skill-badge {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-badge.tech {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+/* --- CONTACTO --- */
+.contact-info {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-info strong {
+    color: #0f172a;
+}
+
+.contact-detail {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.contact-detail:first-of-type {
+    margin-top: 1.5rem;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 3rem 5%;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-avatar {
+        width: 180px;
+        height: 180px;
+    }
+}
